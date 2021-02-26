@@ -1,17 +1,16 @@
+const config = {
+  useIAM: true,
+};
+
 /* eslint-disable */
 var gulp = require('gulp'),
-  dotenv = require('dotenv').config(),
+  // dotenv = require('dotenv').config(),
   sass = require('gulp-ruby-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('cssnano'),
   postcss = require('gulp-postcss'),
   rename = require('gulp-rename'),
   del = require('del'),
-  config = {
-	useIAM: false,
-	accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-	secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-  },
   s3 = require('gulp-s3-upload')(config),
   rp = require('request-promise'),
   webpack = require('webpack-stream'),
